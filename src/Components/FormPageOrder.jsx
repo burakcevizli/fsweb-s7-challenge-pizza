@@ -1,5 +1,7 @@
 import React from "react";
-import FormPageSelector from "./FormPageSelects";
+import FormPageSelector from "./FormPageRadio";
+import FormPageHamur from "./FormPageHamur";
+import FormPageEkMalzemeler from "./FormPageEkMalzemeler";
 
 const FormPageOrder = () => {
   return (
@@ -23,7 +25,13 @@ const FormPageOrder = () => {
           </p>
         </div>
       </div>
-      <FormPageSelector />
+      <div className="OrdersDiv">
+        <FormPageSelector />
+        <FormPageHamur />
+      </div>
+      <div className="EkMalzemeler">
+        <FormPageEkMalzemeler />
+      </div>
     </div>
   );
 };
