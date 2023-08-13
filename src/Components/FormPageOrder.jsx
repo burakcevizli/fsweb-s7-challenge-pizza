@@ -37,6 +37,7 @@ const FormPageOrder = () => {
         <h4>Sipariş Notu</h4>
         <FormPageNote />
       </div>
+      <hr className="Hr"/>
     </div>
   );
 };
