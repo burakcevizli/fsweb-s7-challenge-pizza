@@ -9,10 +9,9 @@ const FormPageOrder = () => {
 
   const [ekMalzemelerPrice , setEkMalzemelerPrice] = useState(0)
 
-  const biberClickHandler = (event) =>{
-    if(event.target.checked == true){
-      setEkMalzemelerPrice(ekMalzemelerPrice + 5)
-    }
+  const biberClickHandler = (event) => {
+    const isChecked = event.target.checked;
+    isChecked == true ? setEkMalzemelerPrice(ekMalzemelerPrice + 5) : setEkMalzemelerPrice(ekMalzemelerPrice -5)
   }
 
 
@@ -85,6 +84,20 @@ const FormPageOrder = () => {
         <Label check>
           <Input type="checkbox" name="Biber" onClick={biberClickHandler}/>
           Biber
+        </Label>
+      </FormGroup>
+
+      <FormGroup check>
+        <Label check>
+          <Input type="checkbox" name="Biber" onClick={biberClickHandler}/>
+          Soğan
+        </Label>
+      </FormGroup>
+
+      <FormGroup check>
+        <Label check>
+          <Input type="checkbox" name="Biber" onClick={biberClickHandler}/>
+          Sucuk
         </Label>
       </FormGroup>
         
