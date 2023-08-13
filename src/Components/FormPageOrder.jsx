@@ -2,6 +2,7 @@ import React from "react";
 import FormPageSelector from "./FormPageRadio";
 import FormPageHamur from "./FormPageHamur";
 import FormPageEkMalzemeler from "./FormPageEkMalzemeler";
+import FormPageNote from "./FormPageNote";
 
 const FormPageOrder = () => {
   return (
@@ -31,6 +32,10 @@ const FormPageOrder = () => {
       </div>
       <div className="EkMalzemeler">
         <FormPageEkMalzemeler />
+      </div>
+      <div className="NoteClass">
+        <h4>Sipariş Notu</h4>
+        <FormPageNote />
       </div>
     </div>
   );

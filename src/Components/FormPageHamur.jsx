@@ -6,7 +6,7 @@ const FormPageHamur = () => {
   return (
     <Form>
       <FormGroup>
-        <Label for="exampleSelect"><h4>Hamur Seçiniz <span className="yıldız">*</span></h4> </Label>
+        <Label htmlFor="exampleSelect"><h4>Hamur Seçiniz <span className="yıldız">*</span></h4> </Label>
         <Input type="select" name="select" id="exampleSelect" >
         <option value="" disabled>Hamur Seçiniz</option>
           <option>İnce</option>
