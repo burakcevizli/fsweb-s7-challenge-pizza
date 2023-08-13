@@ -3,6 +3,8 @@ import FormPageSelector from "./FormPageRadio";
 import FormPageHamur from "./FormPageHamur";
 import FormPageEkMalzemeler from "./FormPageEkMalzemeler";
 import FormPageNote from "./FormPageNote";
+import FormPageCounter from "./FormPageCounter";
+import FormPageAdisyon from "./FormPageAdisyon";
 
 const FormPageOrder = () => {
   return (
@@ -38,6 +40,10 @@ const FormPageOrder = () => {
         <FormPageNote />
       </div>
       <hr className="Hr"/>
+      <div className="CounterAdisyon">
+        <FormPageCounter />
+        <FormPageAdisyon />
+      </div>
     </div>
   );
 };

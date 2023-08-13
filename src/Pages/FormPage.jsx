@@ -7,7 +7,6 @@ const FormPage = () => {
     <div>
       <FormPageHeader />
       <FormPageOrder />
-  
     </div>
   );
 };
