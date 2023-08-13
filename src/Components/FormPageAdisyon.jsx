@@ -7,12 +7,14 @@ const FormPageAdisyon = (props) => {
 
     const pizzaPrice = 85.50
     const [totalPrice,setTotalPrice] = useState(pizzaPrice)
-
+    const {ekMalzemelerPrice} = props
     
 
     useEffect(() => {
-        setTotalPrice(pizzaPrice * props.counter);
-      }, [props.counter]);
+        setTotalPrice((pizzaPrice * props.counter) + ekMalzemelerPrice);
+      }, [props.counter , ekMalzemelerPrice]);
+      
+
         
     
 
@@ -23,7 +25,7 @@ const FormPageAdisyon = (props) => {
       <h3>Sipariş Toplamı</h3>
       <div className="Secimler">
         <h4>Secimler</h4>
-        <h4>sdgsdfsdfsdf</h4>
+        <h4>{ekMalzemelerPrice}</h4>
       </div>
       <div className="Toplam">
         <h4>Toplam</h4>

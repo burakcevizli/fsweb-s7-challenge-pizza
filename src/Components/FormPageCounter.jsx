@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import FormPageAdisyon from "./FormPageAdisyon";
 
-const FormPageCounter = () => {
+const FormPageCounter = (props) => {
   const [counter, setCounter] = useState(1);
+  const {ekMalzemelerPrice} = props
 
   const arttir = () => {
     setCounter(counter + 1);
@@ -22,7 +23,7 @@ const FormPageCounter = () => {
       <button className="Arttır" onClick={arttir}>
         +
       </button>
-      <FormPageAdisyon counter={counter} />
+      <FormPageAdisyon counter={counter} ekMalzemelerPrice = {ekMalzemelerPrice} />
     </div>
   );
 };

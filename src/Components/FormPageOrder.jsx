@@ -1,13 +1,22 @@
 import React from "react";
 import FormPageCounter from "./FormPageCounter";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { useState } from "react";
+import { useEffect } from "react";
 
 const FormPageOrder = () => {
 
 
+  const [ekMalzemelerPrice , setEkMalzemelerPrice] = useState(0)
+
+  const biberClickHandler = (event) =>{
+    if(event.target.checked == true){
+      setEkMalzemelerPrice(ekMalzemelerPrice + 5)
+    }
+  }
 
 
-  
+
   return (
     <div className="FPOMD">
       <h2>Position Absolute Acı Pizza</h2>
@@ -71,12 +80,14 @@ const FormPageOrder = () => {
       <p>En Fazla 10 Malzeme Seçebilirsiniz. 5₺. </p>
       <div className="CheckBoxDiv">
      
-        <FormGroup check>
-          <Label check>
-            <Input type="checkbox" name="Biber"/>
-            Biber
-          </Label>
-        </FormGroup>
+
+      <FormGroup check>
+        <Label check>
+          <Input type="checkbox" name="Biber" onClick={biberClickHandler}/>
+          Biber
+        </Label>
+      </FormGroup>
+        
         
       </div>
     </div>
@@ -99,7 +110,7 @@ const FormPageOrder = () => {
 
       {/* // COUNTER PAGE OLDUGU KISIM */}
       <div className="CounterAdisyon">
-        <FormPageCounter />
+        <FormPageCounter ekMalzemelerPrice = {ekMalzemelerPrice}/>
       </div>
     </div>
   );
