@@ -13,9 +13,9 @@ const FormPageCounter = () => {
 
   return (
     <div className="ButonCounter">
-      <button onClick={azalt}>-</button>
+      <button className="Arttır" onClick={azalt}>-</button>
       <p>{counter}</p>
-      <button onClick={arttir}>+</button>
+      <button className="Eksilt" onClick={arttir}>+</button>
     </div>
   );
 }

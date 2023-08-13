@@ -48,8 +48,31 @@
 .Hr{
     margin-top: 1.5rem;
 }
+.CounterAdisyon{
+    display: flex;
+    
+}
+.AdisyonClass{
+    padding: 5rem;
+    margin-left: 20rem;
+    border: 1px solid black;
+}
+.Arttır{
+    height: 3rem;
+}
+.Eksilt{
+    height: 3rem;
+}
 .ButonCounter{
     display: flex;
     width: 30%;
+    justify-content: space-between;
+}
+.Secimler{
+    display: flex;
+    justify-content: space-between;
+}
+.Toplam{
+    display: flex;
     justify-content: space-between;
 }
