@@ -1,11 +1,15 @@
 import React from "react";
+import FormPage from "./Pages/FormPage";
+
 
 const App = () => {
   return (
-    <>
-      <h1>Teknolojik Yemekler</h1>
-      <p>Burdaki kodu silip kendi headerınızı ekleyebilirsiniz</p>
-    </>
-  );
+    
+
+
+    
+    <FormPage />
+
+  )
 };
 export default App;

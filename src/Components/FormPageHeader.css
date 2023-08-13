@@ -1,0 +1,27 @@
+.FormPageHeader{
+    
+    background-color: #CE2829;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.FormPageHeader h1{
+    color: #FAF7F2;
+    margin-block-start: 0
+}
+
+.FYPP p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    
+}
+.FYPP{
+    display: flex;
+    justify-content: space-between;
+}
+
+.FPOMD{
+    margin-left: 30%;
+    margin-right: 30%;
+}
