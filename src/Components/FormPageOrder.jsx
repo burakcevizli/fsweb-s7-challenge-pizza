@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import FormPageCounter from "./FormPageCounter";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import { useState } from "react";
@@ -8,6 +8,7 @@ const FormPageOrder = () => {
   const formObjesi = {
     isim: "Position Absolute Acı Pizza",
     pizzaAcıklama: " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızı alamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcı olabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
+
     boyut: size,
     biber: biber
   };
@@ -15,23 +16,31 @@ const FormPageOrder = () => {
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
   const [size , setSize] = useState("")
   const [biber,setBiber] = useState(false)
+  const [sogan,setSogan] = useState(false)
+  const [sucuk,setSucuk] = useState(false)
+  const [peynir,setPeynir] = useState(false)
+  const [isim,setİsim] = useState("")
   
   const hamurClickHandler = (event) => {
-    if(event.target.value == "kucuk") {
+    if(event.target.value === "kucuk") {
       setSize("Küçük")
       setEkMalzemelerPrice(ekMalzemelerPrice + 20)
-    }else if (event.target.value == "buyuk"){
+    }else if (event.target.value === "buyuk"){
       setSize("Büyük")
       setEkMalzemelerPrice(ekMalzemelerPrice + 40)
     }
   }
 
+  const nameChangeHandler = (event)=>{
+    setİsim(event.target.value)
+  }
+
   const biberClickHandler = (event) => {
     const isChecked = event.target.checked;
-    isChecked == true
+    isChecked === true
       ? setEkMalzemelerPrice(ekMalzemelerPrice + 5)
       : setEkMalzemelerPrice(ekMalzemelerPrice - 5)
-      isChecked == true ? setBiber(event.target.name) : setBiber(false)
+      isChecked === true ? setSogan(true) : setSogan(false)
   };
 
   return (
@@ -50,7 +59,7 @@ const FormPageOrder = () => {
         </div>
       </div>
       <div className="OrdersDiv">
-        <Form>
+        <Form id="pizza-form">
           <FormGroup>
             <h4>
               Boyut Seç <span className="yıldız">*</span>
@@ -149,6 +158,17 @@ const FormPageOrder = () => {
         </div>
       </div>
       <div className="NoteClass">
+      <FormGroup className="nameInput">
+          <Label htmlFor="exampleEmail"></Label>
+          <Input
+            className="NotInput"
+            type="text"
+            name="Name"
+            id="name-input"
+            placeholder="İsminizi Yazar mısınız ?"
+            onChange={nameChangeHandler}
+          />
+        </FormGroup>
         <h4>Sipariş Notu</h4>
         <FormGroup>
           <Label htmlFor="exampleEmail"></Label>
@@ -165,7 +185,7 @@ const FormPageOrder = () => {
 
       {/* // COUNTER PAGE OLDUGU KISIM */}
       <div className="CounterAdisyon">
-        <FormPageCounter ekMalzemelerPrice={ekMalzemelerPrice} formObjesi = {formObjesi} size = {size} biber = {biber}/>
+        <FormPageCounter ekMalzemelerPrice={ekMalzemelerPrice} formObjesi = {formObjesi} size = {size} biber = {biber} isim = {isim} sogan = {sogan} sucuk = {sucuk} peynir = {peynir}/>
       </div>
     </div>
   );

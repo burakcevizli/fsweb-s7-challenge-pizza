@@ -4,24 +4,36 @@ import { useState } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 const FormPageAdisyon = (props) => {
+  const pizzaPrice = 85.5;
+  const [totalPrice, setTotalPrice] = useState(pizzaPrice);
+  const {
+    ekMalzemelerPrice,
+    formObjesi,
+    size,
+    biber,
+    isim,
+    sogan,
+    sucuk,
+    peynir,
+  } = props;
 
-    
-    const pizzaPrice = 85.50
-    const [totalPrice,setTotalPrice] = useState(pizzaPrice)
-    const {ekMalzemelerPrice , formObjesi , size , biber} = props
-    
+  useEffect(() => {
+    setTotalPrice(pizzaPrice * props.counter + ekMalzemelerPrice);
+  }, [props.counter, ekMalzemelerPrice]);
 
-    useEffect(() => {
-        setTotalPrice((pizzaPrice * props.counter) + ekMalzemelerPrice);
-      }, [props.counter , ekMalzemelerPrice]);
-      
+  const fis = {
+    Pizza: formObjesi.isim,
+    PizzaDetay: formObjesi.pizzaAcıklama,
+    Fiyat: totalPrice,
+    Boyut: size,
+    Biber: biber,
+    Sogan: sogan,
+    Sucuk: sucuk,
+    Peynir: peynir,
+    Müşteri: isim,
+  };
 
-      const fis = [formObjesi , totalPrice , size , biber]
-
-      console.log(fis)
-    
-
-    
+  console.log(fis);
 
   return (
     <div className="AdisyonClass">
@@ -34,7 +46,9 @@ const FormPageAdisyon = (props) => {
         <h4>Toplam</h4>
         <h4>{totalPrice}</h4>
       </div>
-      <Button type="submit" className="SiparisVer">Sipariş Ver</Button>
+      <Button type="submit" id="order-button" className="SiparisVer">
+        Sipariş Ver
+      </Button>
     </div>
   );
 };
