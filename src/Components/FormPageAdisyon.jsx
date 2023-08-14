@@ -15,6 +15,7 @@ const FormPageAdisyon = (props) => {
     sogan,
     sucuk,
     peynir,
+    note
   } = props;
 
   useEffect(() => {
@@ -31,6 +32,7 @@ const FormPageAdisyon = (props) => {
     Sucuk: sucuk,
     Peynir: peynir,
     Müşteri: isim,
+    MüşteriNotu : note
   };
 
   console.log(fis);

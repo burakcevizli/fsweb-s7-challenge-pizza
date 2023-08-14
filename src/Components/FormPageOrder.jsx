@@ -4,70 +4,76 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import { useState } from "react";
 
 const FormPageOrder = () => {
-
   const formObjesi = {
     isim: "Position Absolute Acı Pizza",
-    pizzaAcıklama: " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızı alamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcı olabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
+    pizzaAcıklama:
+      " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızı alamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcı olabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
 
     boyut: size,
-    biber: biber
+    biber: biber,
   };
 
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
-  const [size , setSize] = useState("")
-  const [biber,setBiber] = useState(false)
-  const [sogan,setSogan] = useState(false)
-  const [sucuk,setSucuk] = useState(false)
-  const [peynir,setPeynir] = useState(false)
-  const [isim,setİsim] = useState("")
-  
-  const hamurClickHandler = (event) => {
-    if(event.target.value === "kucuk") {
-      setSize("Küçük")
-      setEkMalzemelerPrice(ekMalzemelerPrice + 20)
-    }else if (event.target.value === "buyuk"){
-      setSize("Büyük")
-      setEkMalzemelerPrice(ekMalzemelerPrice + 40)
-    }
-  }
+  const [size, setSize] = useState("");
+  const [biber, setBiber] = useState(false);
+  const [sogan, setSogan] = useState(false);
+  const [sucuk, setSucuk] = useState(false);
+  const [peynir, setPeynir] = useState(false);
+  const [isim, setİsim] = useState("");
+  const [note, setNote] = useState("");
 
-  const nameChangeHandler = (event)=>{
-    setİsim(event.target.value)
-  }
+
+  const hamurClickHandler = (event) => {
+    if (event.target.value === "kucuk") {
+      setSize("Küçük");
+      setEkMalzemelerPrice(ekMalzemelerPrice + 20);
+    } else if (event.target.value === "buyuk") {
+      setSize("Büyük");
+      setEkMalzemelerPrice(ekMalzemelerPrice + 40);
+    }
+  };
+
+  const nameChangeHandler = (event) => {
+    setİsim(event.target.value);
+  };
+
+  const noteChangeHandler = (event) => {
+    setNote(event.target.value)
+  };
 
   const biberClickHandler = (event) => {
     const isChecked = event.target.checked;
-    if(isChecked === true && event.target.name === "Biber"){
+    if (isChecked === true && event.target.name === "Biber") {
       setEkMalzemelerPrice(ekMalzemelerPrice + 5);
-      setBiber(true)
-    }else{
+      setBiber(true);
+    } else {
       setEkMalzemelerPrice(ekMalzemelerPrice - 5);
     }
   };
   const soganClickHandler = (event) => {
     const isChecked = event.target.checked;
-    if(isChecked === true && event.target.name === "Sogan"){
+    if (isChecked === true && event.target.name === "Sogan") {
       setEkMalzemelerPrice(ekMalzemelerPrice + 5);
-      setSogan(true)
-    }else{
+      setSogan(true);
+    } else {
       setEkMalzemelerPrice(ekMalzemelerPrice - 5);
     }
   };
   const sucukClickHandler = (event) => {
     const isChecked = event.target.checked;
-    if(isChecked === true && event.target.name === "Sucuk"){
+    if (isChecked === true && event.target.name === "Sucuk") {
       setEkMalzemelerPrice(ekMalzemelerPrice + 5);
-      setSucuk(true)
-    }else{
+      setSucuk(true);
+    } else {
       setEkMalzemelerPrice(ekMalzemelerPrice - 5);
     }
   };
   const peynirClickHandler = (event) => {
     const isChecked = event.target.checked;
-    if(isChecked === true && event.target.name === "Peynir"){
+    if (isChecked === true && event.target.name === "Peynir") {
       setEkMalzemelerPrice(ekMalzemelerPrice + 5);
-      setPeynir(true)
-    }else{
+      setPeynir(true);
+    } else {
       setEkMalzemelerPrice(ekMalzemelerPrice - 5);
     }
   };
@@ -82,9 +88,7 @@ const FormPageOrder = () => {
           <p>(200)</p>
         </div>
         <div className="Paragraf">
-          <p>
-            {formObjesi.pizzaAcıklama}
-          </p>
+          <p>{formObjesi.pizzaAcıklama}</p>
         </div>
       </div>
       <div className="OrdersDiv">
@@ -187,8 +191,10 @@ const FormPageOrder = () => {
         </div>
       </div>
       <div className="NoteClass">
-      <FormGroup className="nameInput">
-          <Label htmlFor="exampleEmail"></Label>
+        <FormGroup className="nameInput">
+          <Label htmlFor="exampleEmail">
+            <h4>İsim</h4>
+          </Label>
           <Input
             className="NotInput"
             type="text"
@@ -198,15 +204,18 @@ const FormPageOrder = () => {
             onChange={nameChangeHandler}
           />
         </FormGroup>
-        <h4>Sipariş Notu</h4>
+
         <FormGroup>
-          <Label htmlFor="exampleEmail"></Label>
+          <Label htmlFor="exampleEmail">
+            <h4>Sipariş Notu</h4>
+          </Label>
           <Input
             className="NotInput"
             type="text"
             name="email"
             id="exampleEmail"
             placeholder="Siparişine eklemek istediğin bir not var mı ?"
+            onChange={noteChangeHandler}
           />
         </FormGroup>
       </div>
@@ -214,7 +223,17 @@ const FormPageOrder = () => {
 
       {/* // COUNTER PAGE OLDUGU KISIM */}
       <div className="CounterAdisyon">
-        <FormPageCounter ekMalzemelerPrice={ekMalzemelerPrice} formObjesi = {formObjesi} size = {size} biber = {biber} isim = {isim} sogan = {sogan} sucuk = {sucuk} peynir = {peynir}/>
+        <FormPageCounter
+          ekMalzemelerPrice={ekMalzemelerPrice}
+          formObjesi={formObjesi}
+          size={size}
+          biber={biber}
+          isim={isim}
+          sogan={sogan}
+          sucuk={sucuk}
+          peynir={peynir}
+          note = {note}
+        />
       </div>
     </div>
   );
