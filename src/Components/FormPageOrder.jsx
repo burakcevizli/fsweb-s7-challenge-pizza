@@ -9,10 +9,17 @@ const FormPageOrder = () => {
 
   const [ekMalzemelerPrice , setEkMalzemelerPrice] = useState(0)
 
+  const kucukHamurClickHandler = (event)=>{
+    const kucuk = event.target.value;
+    kucuk === "kucuk" ? setEkMalzemelerPrice(ekMalzemelerPrice + 20) : setEkMalzemelerPrice(ekMalzemelerPrice + 30)
+  }
+
   const biberClickHandler = (event) => {
     const isChecked = event.target.checked;
     isChecked == true ? setEkMalzemelerPrice(ekMalzemelerPrice + 5) : setEkMalzemelerPrice(ekMalzemelerPrice -5)
   }
+
+
 
 
 
@@ -43,19 +50,14 @@ const FormPageOrder = () => {
           <h4>Boyut Seç <span className="yıldız">*</span></h4>
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="radio1" />
+              <Input type="radio" name="radio1" value="kucuk" onClick={kucukHamurClickHandler} />
               Küçük
             </Label>
           </FormGroup>
-          <FormGroup check>
+          
+          <FormGroup check >
             <Label check>
-              <Input type="radio" name="radio1" />
-              Orta
-            </Label>
-          </FormGroup>
-          <FormGroup check disabled>
-            <Label check>
-              <Input type="radio" name="radio1" />
+              <Input type="radio" name="radio1" onClick={kucukHamurClickHandler}/>
               Büyük
             </Label>
           </FormGroup>
