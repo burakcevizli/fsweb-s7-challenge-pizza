@@ -37,10 +37,39 @@ const FormPageOrder = () => {
 
   const biberClickHandler = (event) => {
     const isChecked = event.target.checked;
-    isChecked === true
-      ? setEkMalzemelerPrice(ekMalzemelerPrice + 5)
-      : setEkMalzemelerPrice(ekMalzemelerPrice - 5)
-      isChecked === true ? setSogan(true) : setSogan(false)
+    if(isChecked === true && event.target.name === "Biber"){
+      setEkMalzemelerPrice(ekMalzemelerPrice + 5);
+      setBiber(true)
+    }else{
+      setEkMalzemelerPrice(ekMalzemelerPrice - 5);
+    }
+  };
+  const soganClickHandler = (event) => {
+    const isChecked = event.target.checked;
+    if(isChecked === true && event.target.name === "Sogan"){
+      setEkMalzemelerPrice(ekMalzemelerPrice + 5);
+      setSogan(true)
+    }else{
+      setEkMalzemelerPrice(ekMalzemelerPrice - 5);
+    }
+  };
+  const sucukClickHandler = (event) => {
+    const isChecked = event.target.checked;
+    if(isChecked === true && event.target.name === "Sucuk"){
+      setEkMalzemelerPrice(ekMalzemelerPrice + 5);
+      setSucuk(true)
+    }else{
+      setEkMalzemelerPrice(ekMalzemelerPrice - 5);
+    }
+  };
+  const peynirClickHandler = (event) => {
+    const isChecked = event.target.checked;
+    if(isChecked === true && event.target.name === "Peynir"){
+      setEkMalzemelerPrice(ekMalzemelerPrice + 5);
+      setPeynir(true)
+    }else{
+      setEkMalzemelerPrice(ekMalzemelerPrice - 5);
+    }
   };
 
   return (
@@ -128,7 +157,7 @@ const FormPageOrder = () => {
                 <Input
                   type="checkbox"
                   name="Sogan"
-                  onClick={biberClickHandler}
+                  onClick={soganClickHandler}
                 />
                 Soğan
               </Label>
@@ -139,7 +168,7 @@ const FormPageOrder = () => {
                 <Input
                   type="checkbox"
                   name="Sucuk"
-                  onClick={biberClickHandler}
+                  onClick={sucukClickHandler}
                 />
                 Sucuk
               </Label>
@@ -149,7 +178,7 @@ const FormPageOrder = () => {
                 <Input
                   type="checkbox"
                   name="Peynir"
-                  onClick={biberClickHandler}
+                  onClick={peynirClickHandler}
                 />
                 Mozarella Peyniri
               </Label>
