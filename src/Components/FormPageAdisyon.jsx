@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button} from "reactstrap";
 
 const FormPageAdisyon = (props) => {
-  const pizzaPrice = 85.5;
+  const pizzaPrice = 40;
   const [totalPrice, setTotalPrice] = useState(pizzaPrice);
   const {
     ekMalzemelerPrice,
