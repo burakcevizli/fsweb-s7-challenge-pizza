@@ -21,7 +21,7 @@ const FormPageCounter = (props) => {
   };
 
   const azalt = () => {
-    setCounter(counter - 1);
+    setCounter(Math.max(counter -1 , 1));
   };
 
   return (
