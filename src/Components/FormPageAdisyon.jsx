@@ -5,9 +5,10 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 const FormPageAdisyon = (props) => {
 
+    
     const pizzaPrice = 85.50
     const [totalPrice,setTotalPrice] = useState(pizzaPrice)
-    const {ekMalzemelerPrice} = props
+    const {ekMalzemelerPrice , formObjesi} = props
     
 
     useEffect(() => {
@@ -15,7 +16,9 @@ const FormPageAdisyon = (props) => {
       }, [props.counter , ekMalzemelerPrice]);
       
 
-        
+      const fis = [formObjesi , totalPrice]
+
+      console.log(fis)
     
 
     
@@ -31,7 +34,7 @@ const FormPageAdisyon = (props) => {
         <h4>Toplam</h4>
         <h4>{totalPrice}</h4>
       </div>
-      <Button className="SiparisVer">Sipariş Ver</Button>
+      <Button type="submit" className="SiparisVer">Sipariş Ver</Button>
     </div>
   );
 };
