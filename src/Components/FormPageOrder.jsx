@@ -16,6 +16,7 @@ const FormPageOrder = () => {
   };
 
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
+  const [boyutSizePrice , setBoyutSizePrice] = useState(0)
   const [size, setSize] = useState("");
   const [biber, setBiber] = useState(false);
   const [sogan, setSogan] = useState(false);
@@ -28,10 +29,10 @@ const FormPageOrder = () => {
   const boyutClickHandler = (event) => {
     if (event.target.value === "kucuk") {
       setSize("Küçük");
-      setEkMalzemelerPrice(kucukBoyutFiyat);  
+      setBoyutSizePrice(kucukBoyutFiyat);  
     } else if (event.target.value === "buyuk") {
       setSize("Büyük");
-      setEkMalzemelerPrice(buyukBoyutFiyat);
+      setBoyutSizePrice(buyukBoyutFiyat);
     }
   };
   
@@ -236,6 +237,7 @@ const FormPageOrder = () => {
           sucuk={sucuk}
           peynir={peynir}
           note = {note}
+          boyutSizePrice = {boyutSizePrice}
         />
       </div>
     </div>

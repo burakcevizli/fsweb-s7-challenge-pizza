@@ -13,6 +13,7 @@ const FormPageCounter = (props) => {
     sucuk,
     peynir,
     note,
+    boyutSizePrice,
   } = props;
 
   const arttir = () => {
@@ -47,6 +48,7 @@ const FormPageCounter = (props) => {
         sucuk={sucuk}
         peynir={peynir}
         note={note}
+        boyutSizePrice = {boyutSizePrice}
       />
     </div>
   );
