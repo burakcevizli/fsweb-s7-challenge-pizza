@@ -1,0 +1,44 @@
+.Resim {
+    background-image: url("mvp-banner.png");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.MainPageGenelDiv h1{
+    margin-bottom: 2rem;
+    padding: 0;
+    color: #FAF7F2;
+    margin-left: 5rem;
+}
+.MainPageGenelDiv .KodYazı{
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #FAF7F2;
+}
+.MainPageGenelDiv .PızzaYazı{
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #FAF7F2;
+}
+.Yazılar{
+    margin-bottom: 25rem;
+}
+.AcıktımButon{
+    background-color: #FDC913;
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    margin-left: 9rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
