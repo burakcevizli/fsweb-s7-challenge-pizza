@@ -4,8 +4,11 @@ import "./FormPageHeader.css";
 const FormPageHeader = () => {
   return (
     <div className="FormPageHeader">
+      <div className="headerBaslıklar">
       <h1>Teknolojik Yemekler</h1>
-      <h6>Anasayfa - Seçenekler - Sipariş Oluştur</h6>
+      <h4>Anasayfa - Seçenekler - Sipariş Oluştur</h4>
+      </div>
+      
     </div>
   );
 };

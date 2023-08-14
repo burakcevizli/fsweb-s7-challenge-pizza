@@ -1,14 +1,28 @@
+
+.FPOMD{
+    margin-left: 25%;
+    margin-right: 25%;
+}
 .FormPageHeader{
-    
     background-color: #CE2829;
     height: 20vh;
-    display: flex;
     align-items: center;
-    justify-content: center;
 }
 .FormPageHeader h1{
     color: #FAF7F2;
-    margin-block-start: 0
+    margin-block-start: 0;    
+}
+.FormPageHeader h4{
+    text-align: start;   
+    margin-top: 3.5rem;
+    color: #FAF7F2;
+}
+
+.headerBaslıklar{
+    text-align: center;
+    padding-top: 4rem;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .FYPP p{
@@ -21,10 +35,6 @@
     justify-content: space-between;
 }
 
-.FPOMD{
-    margin-left: 30%;
-    margin-right: 30%;
-}
 .yıldız{
     color: red;
 }
