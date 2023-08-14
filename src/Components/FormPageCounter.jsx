@@ -3,7 +3,7 @@ import FormPageAdisyon from "./FormPageAdisyon";
 
 const FormPageCounter = (props) => {
   const [counter, setCounter] = useState(1);
-  const {ekMalzemelerPrice , formObjesi} = props
+  const {ekMalzemelerPrice , formObjesi , size , biber} = props
 
   const arttir = () => {
     setCounter(counter + 1);
@@ -23,7 +23,7 @@ const FormPageCounter = (props) => {
       <button className="Arttır" onClick={arttir}>
         +
       </button>
-      <FormPageAdisyon counter={counter} ekMalzemelerPrice = {ekMalzemelerPrice} formObjesi = {formObjesi}/>
+      <FormPageAdisyon counter={counter} ekMalzemelerPrice = {ekMalzemelerPrice} formObjesi = {formObjesi} size = {size} biber = {biber}/>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FormPageCounter from "./FormPageCounter";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import { useState } from "react";
@@ -7,16 +7,21 @@ const FormPageOrder = () => {
 
   const formObjesi = {
     isim: "Position Absolute Acı Pizza",
-    pizzaAcıklama: " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızıalamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcıolabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
-    
+    pizzaAcıklama: " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızı alamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcı olabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
+    boyut: size,
+    biber: biber
   };
 
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
-
-  const kucukHamurClickHandler = (event) => {
+  const [size , setSize] = useState("")
+  const [biber,setBiber] = useState(false)
+  
+  const hamurClickHandler = (event) => {
     if(event.target.value == "kucuk") {
+      setSize("Küçük")
       setEkMalzemelerPrice(ekMalzemelerPrice + 20)
     }else if (event.target.value == "buyuk"){
+      setSize("Büyük")
       setEkMalzemelerPrice(ekMalzemelerPrice + 40)
     }
   }
@@ -25,7 +30,8 @@ const FormPageOrder = () => {
     const isChecked = event.target.checked;
     isChecked == true
       ? setEkMalzemelerPrice(ekMalzemelerPrice + 5)
-      : setEkMalzemelerPrice(ekMalzemelerPrice - 5);
+      : setEkMalzemelerPrice(ekMalzemelerPrice - 5)
+      isChecked == true ? setBiber(event.target.name) : setBiber(false)
   };
 
   return (
@@ -55,7 +61,7 @@ const FormPageOrder = () => {
                   type="radio"
                   name="radio1"
                   value="kucuk"
-                  onChange={kucukHamurClickHandler}
+                  onChange={hamurClickHandler}
                 />
                 Küçük
               </Label>
@@ -67,7 +73,7 @@ const FormPageOrder = () => {
                   type="radio"
                   name="radio1"
                   value="buyuk"
-                  onChange={kucukHamurClickHandler}
+                  onChange={hamurClickHandler}
                 />
                 Büyük
               </Label>
@@ -79,7 +85,7 @@ const FormPageOrder = () => {
             <Label htmlFor="exampleSelect">
               <h4>
                 Hamur Seçiniz <span className="yıldız">*</span>
-              </h4>{" "}
+              </h4>
             </Label>
             <Input type="select" name="select" id="exampleSelect">
               <option value="" disabled>
@@ -112,7 +118,7 @@ const FormPageOrder = () => {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="Biber"
+                  name="Sogan"
                   onClick={biberClickHandler}
                 />
                 Soğan
@@ -123,10 +129,20 @@ const FormPageOrder = () => {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="Biber"
+                  name="Sucuk"
                   onClick={biberClickHandler}
                 />
                 Sucuk
+              </Label>
+            </FormGroup>
+            <FormGroup check>
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="Peynir"
+                  onClick={biberClickHandler}
+                />
+                Mozarella Peyniri
               </Label>
             </FormGroup>
           </div>
@@ -149,7 +165,7 @@ const FormPageOrder = () => {
 
       {/* // COUNTER PAGE OLDUGU KISIM */}
       <div className="CounterAdisyon">
-        <FormPageCounter ekMalzemelerPrice={ekMalzemelerPrice} formObjesi = {formObjesi} />
+        <FormPageCounter ekMalzemelerPrice={ekMalzemelerPrice} formObjesi = {formObjesi} size = {size} biber = {biber}/>
       </div>
     </div>
   );
