@@ -12,7 +12,7 @@ const FormPageCounter = (props) => {
     sogan,
     sucuk,
     peynir,
-    note
+    note,
   } = props;
 
   const arttir = () => {
@@ -25,14 +25,17 @@ const FormPageCounter = (props) => {
 
   return (
     <div className="ButonCounter">
-      <button className="Eksilt" onClick={azalt}>
-        -
-      </button>
+      <div className="CounterSide">
+        <button className="Eksilt" onClick={azalt}>
+          -
+        </button>
 
-      <p>{counter}</p>
-      <button className="Arttır" onClick={arttir}>
-        +
-      </button>
+        <p>{counter}</p>
+        <button className="Arttır" onClick={arttir}>
+          +
+        </button>
+      </div>
+
       <FormPageAdisyon
         counter={counter}
         ekMalzemelerPrice={ekMalzemelerPrice}
@@ -43,7 +46,7 @@ const FormPageCounter = (props) => {
         sogan={sogan}
         sucuk={sucuk}
         peynir={peynir}
-        note = {note}
+        note={note}
       />
     </div>
   );

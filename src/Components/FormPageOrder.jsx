@@ -8,9 +8,7 @@ const FormPageOrder = () => {
     isim: "Position Absolute Acı Pizza",
     pizzaAcıklama:
       " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızı alamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcı olabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
-
     boyut: size,
-    biber: biber,
   };
 
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
@@ -23,7 +21,7 @@ const FormPageOrder = () => {
   const [note, setNote] = useState("");
 
 
-  const hamurClickHandler = (event) => {
+  const boyutClickHandler = (event) => {
     if (event.target.value === "kucuk") {
       setSize("Küçük");
       setEkMalzemelerPrice(ekMalzemelerPrice + 20);
@@ -103,7 +101,7 @@ const FormPageOrder = () => {
                   type="radio"
                   name="radio1"
                   value="kucuk"
-                  onChange={hamurClickHandler}
+                  onChange={boyutClickHandler}
                 />
                 Küçük
               </Label>
@@ -115,7 +113,7 @@ const FormPageOrder = () => {
                   type="radio"
                   name="radio1"
                   value="buyuk"
-                  onChange={hamurClickHandler}
+                  onChange={boyutClickHandler}
                 />
                 Büyük
               </Label>

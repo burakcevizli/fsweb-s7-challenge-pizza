@@ -48,13 +48,15 @@
 .Hr{
     margin-top: 1.5rem;
 }
+.CounterSide{
+    display: flex;
+}
 .CounterAdisyon{
     display: flex;
-    
+    justify-content: space-between;
 }
 .AdisyonClass{
     padding: 2rem 2rem 0 2rem;
-    margin-left: 20rem;
     border: 1px solid black;
 }
 .Arttır{
@@ -65,7 +67,7 @@
 }
 .ButonCounter{
     display: flex;
-    width: 30%;
+    width: 100%;
     justify-content: space-between;
 }
 .Secimler{

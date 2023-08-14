@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Button} from "reactstrap";
 
 const FormPageAdisyon = (props) => {
   const pizzaPrice = 85.5;
@@ -35,7 +35,11 @@ const FormPageAdisyon = (props) => {
     MüşteriNotu : note
   };
 
-  console.log(fis);
+ 
+
+  const siparisClickHandler = () => {
+    console.log(fis);
+  };
 
   return (
     <div className="AdisyonClass">
@@ -48,7 +52,7 @@ const FormPageAdisyon = (props) => {
         <h4>Toplam</h4>
         <h4>{totalPrice}</h4>
       </div>
-      <Button type="submit" id="order-button" className="SiparisVer">
+      <Button type="submit" id="order-button" className="SiparisVer" onClick={siparisClickHandler}>
         Sipariş Ver
       </Button>
     </div>
