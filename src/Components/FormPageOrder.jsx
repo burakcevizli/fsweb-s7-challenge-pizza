@@ -4,6 +4,10 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import { useState } from "react";
 
 const FormPageOrder = () => {
+
+  const kucukBoyutFiyat = 20;
+  const buyukBoyutFiyat = 40;
+
   const formObjesi = {
     isim: "Position Absolute Acı Pizza",
     pizzaAcıklama:
@@ -24,12 +28,13 @@ const FormPageOrder = () => {
   const boyutClickHandler = (event) => {
     if (event.target.value === "kucuk") {
       setSize("Küçük");
-      setEkMalzemelerPrice(ekMalzemelerPrice + 20);
+      setEkMalzemelerPrice(kucukBoyutFiyat);  
     } else if (event.target.value === "buyuk") {
       setSize("Büyük");
-      setEkMalzemelerPrice(ekMalzemelerPrice + 40);
+      setEkMalzemelerPrice(buyukBoyutFiyat);
     }
   };
+  
 
   const nameChangeHandler = (event) => {
     setİsim(event.target.value);
