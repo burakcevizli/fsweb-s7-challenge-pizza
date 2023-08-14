@@ -40,14 +40,15 @@
 }
 .OrdersDiv{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .CheckBoxDiv{
     width: 80%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .NotInput{
     width: 100%;
@@ -59,22 +60,47 @@
     margin-top: 1.5rem;
 }
 .CounterSide{
+    
     display: flex;
+    width: 15%;
+    justify-content: space-between;
+    height: 3rem;
 }
+
 .CounterAdisyon{
     display: flex;
     justify-content: space-between;
 }
 .AdisyonClass{
-    padding: 2rem 2rem 0 2rem;
+    width: 40%;
     border: 1px solid black;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+.AdisyonClass h3{
+    padding-left: 35%;
+    
+    
 }
 .Arttır{
     height: 3rem;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background-color: #FDC913;
+    border-radius: 2px;
+}
+.counterSayaci{
+    font-weight: bold;
+    
 }
 .Eksilt{
     height: 3rem;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background-color: #FDC913;
+    border-radius: 2px;
 }
+
 .ButonCounter{
     display: flex;
     width: 100%;
@@ -82,14 +108,25 @@
 }
 .Secimler{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+.Secimler h4{
+    color: #292929;
 }
 .Toplam{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+.Toplam h4{
+    color: #CE2829;
+}
+
+
 .SiparisVer{
+    height: 2rem;
     width: 100%;
+    background-color: #FDC913;
+    border-radius: 2px;
 }
 .nameInput{
     margin-top: 1.5rem;

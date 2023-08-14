@@ -47,11 +47,11 @@ const FormPageAdisyon = (props) => {
       <h3>Sipariş Toplamı</h3>
       <div className="Secimler">
         <h4>Secimler</h4>
-        <h4>{ekMalzemelerPrice + boyutSizePrice}</h4>
+        <h4>{ekMalzemelerPrice + boyutSizePrice} ₺</h4>
       </div>
       <div className="Toplam">
         <h4>Toplam</h4>
-        <h4>{totalPrice}</h4>
+        <h4>{totalPrice} ₺</h4>
       </div>
       <Button type="submit" id="order-button" className="SiparisVer" onClick={siparisClickHandler}>
         Sipariş Ver

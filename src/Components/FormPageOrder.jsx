@@ -4,7 +4,6 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import { useState } from "react";
 
 const FormPageOrder = () => {
-
   const kucukBoyutFiyat = 20;
   const buyukBoyutFiyat = 40;
 
@@ -16,7 +15,7 @@ const FormPageOrder = () => {
   };
 
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
-  const [boyutSizePrice , setBoyutSizePrice] = useState(0)
+  const [boyutSizePrice, setBoyutSizePrice] = useState(0);
   const [size, setSize] = useState("");
   const [biber, setBiber] = useState(false);
   const [sogan, setSogan] = useState(false);
@@ -25,24 +24,22 @@ const FormPageOrder = () => {
   const [isim, setİsim] = useState("");
   const [note, setNote] = useState("");
 
-
   const boyutClickHandler = (event) => {
     if (event.target.value === "kucuk") {
       setSize("Küçük");
-      setBoyutSizePrice(kucukBoyutFiyat);  
+      setBoyutSizePrice(kucukBoyutFiyat);
     } else if (event.target.value === "buyuk") {
       setSize("Büyük");
       setBoyutSizePrice(buyukBoyutFiyat);
     }
   };
-  
 
   const nameChangeHandler = (event) => {
     setİsim(event.target.value);
   };
 
   const noteChangeHandler = (event) => {
-    setNote(event.target.value)
+    setNote(event.target.value);
   };
 
   const biberClickHandler = (event) => {
@@ -87,7 +84,7 @@ const FormPageOrder = () => {
       <h2>{formObjesi.isim}</h2>
       <div className="FYP">
         <div className="FYPP">
-          <p>85.50</p>
+          <p>85.50₺</p>
           <p>4.9</p>
           <p>(200)</p>
         </div>
@@ -112,7 +109,7 @@ const FormPageOrder = () => {
                 Küçük
               </Label>
             </FormGroup>
-
+            <br />
             <FormGroup check>
               <Label check>
                 <Input
@@ -145,53 +142,39 @@ const FormPageOrder = () => {
         </Form>
       </div>
       <div className="EkMalzemeler">
-        <div className="EkMalzemeler">
-          <h3>Ek Malzemeler</h3>
-          <p>En Fazla 10 Malzeme Seçebilirsiniz. 5₺. </p>
-          <div className="CheckBoxDiv">
-            <FormGroup check>
-              <Label check>
-                <Input
-                  type="checkbox"
-                  name="Biber"
-                  onClick={biberClickHandler}
-                />
-                Biber
-              </Label>
-            </FormGroup>
+        <h3>Ek Malzemeler</h3>
+        <p>En Fazla 10 Malzeme Seçebilirsiniz. 5₺. </p>
+        <div className="CheckBoxDiv">
+          <FormGroup check>
+            <Label check>
+              <Input type="checkbox" name="Biber" onClick={biberClickHandler} />
+              Biber
+            </Label>
+          </FormGroup>
 
-            <FormGroup check>
-              <Label check>
-                <Input
-                  type="checkbox"
-                  name="Sogan"
-                  onClick={soganClickHandler}
-                />
-                Soğan
-              </Label>
-            </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type="checkbox" name="Sogan" onClick={soganClickHandler} />
+              Soğan
+            </Label>
+          </FormGroup>
 
-            <FormGroup check>
-              <Label check>
-                <Input
-                  type="checkbox"
-                  name="Sucuk"
-                  onClick={sucukClickHandler}
-                />
-                Sucuk
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input
-                  type="checkbox"
-                  name="Peynir"
-                  onClick={peynirClickHandler}
-                />
-                Mozarella Peyniri
-              </Label>
-            </FormGroup>
-          </div>
+          <FormGroup check>
+            <Label check>
+              <Input type="checkbox" name="Sucuk" onClick={sucukClickHandler} />
+              Sucuk
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input
+                type="checkbox"
+                name="Peynir"
+                onClick={peynirClickHandler}
+              />
+              Mozarella Peyniri
+            </Label>
+          </FormGroup>
         </div>
       </div>
       <div className="NoteClass">
@@ -236,8 +219,8 @@ const FormPageOrder = () => {
           sogan={sogan}
           sucuk={sucuk}
           peynir={peynir}
-          note = {note}
-          boyutSizePrice = {boyutSizePrice}
+          note={note}
+          boyutSizePrice={boyutSizePrice}
         />
       </div>
     </div>

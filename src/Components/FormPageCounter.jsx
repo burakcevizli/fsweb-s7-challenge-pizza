@@ -31,7 +31,8 @@ const FormPageCounter = (props) => {
           -
         </button>
 
-        <p>{counter}</p>
+        <p className="counterSayaci">{counter}</p>
+        
         <button className="Arttır" onClick={arttir}>
           +
         </button>
