@@ -193,14 +193,14 @@ const FormPageOrder = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label htmlFor="exampleEmail">
+          <Label htmlFor="special-text">
             <h4>Sipariş Notu</h4>
           </Label>
           <Input
             className="NotInput"
             type="text"
             name="email"
-            id="exampleEmail"
+            id="special-text"
             placeholder="Siparişine eklemek istediğin bir not var mı ?"
             onChange={noteChangeHandler}
           />

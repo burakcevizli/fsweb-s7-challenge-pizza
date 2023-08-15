@@ -7,10 +7,10 @@ import FinalPage from "./Pages/FinalPage";
 const App = () => {
   return (
     <Switch>
-      <Route path="/" exact>
+      <Route id="order-pizza" path="/" exact>
         <MainPage />
       </Route>
-      <Route path="/orderpage">
+      <Route path="/pizza">
         <FormPage />
       </Route>
       <Route path="/finalpage">
