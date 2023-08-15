@@ -8,7 +8,6 @@ const FormPageHeader = () => {
       <h1>Teknolojik Yemekler</h1>
       <h4>Anasayfa - Seçenekler - <span style={{fontWeight:"bold"}}>Sipariş Oluştur</span></h4>
       </div>
-      
     </div>
   );
 };
