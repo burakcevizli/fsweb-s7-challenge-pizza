@@ -2,7 +2,7 @@ import React from "react";
 import FormPage from "./Pages/FormPage";
 import MainPage from "./Pages/MainPage";
 import { Switch, Route } from "react-router-dom";
-import FinalPage from "./Pages/FinalPage";
+import SuccessPage from "./Pages/SuccessPage";
 
 const App = () => {
   return (
@@ -13,8 +13,8 @@ const App = () => {
       <Route path="/pizza">
         <FormPage />
       </Route>
-      <Route path="/finalpage">
-        <FinalPage />
+      <Route path="/successpage">
+        <SuccessPage />
       </Route>
     </Switch>
   )

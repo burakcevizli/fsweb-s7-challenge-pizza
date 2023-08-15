@@ -1,0 +1,22 @@
+.successPageDiv{
+    height: 100vh;
+    background-color: #CE2829;
+}
+.successTeknolojik{
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.successTeknolojik h1{
+    color: #FAF7F2;
+}
+.orderSuccesText{
+    margin-top: 12rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.orderSuccesText p{
+    font-size: 4rem;
+    color: #FAF7F2;
+}
