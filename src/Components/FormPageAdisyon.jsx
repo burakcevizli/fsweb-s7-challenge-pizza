@@ -32,7 +32,7 @@ const FormPageAdisyon = (props) => {
   const fis = {
     Pizza: formObjesi.isim,
     PizzaDetay: formObjesi.pizzaAcıklama,
-    Fiyat: totalPrice,
+    Fiyat: totalPrice + "₺",
     Boyut: size,
     Biber: biber,
     Sogan: sogan,
