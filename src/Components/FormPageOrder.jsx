@@ -2,6 +2,7 @@ import React from "react";
 import FormPageCounter from "./FormPageCounter";
 import {Form, FormGroup, Label, Input} from "reactstrap";
 import { useState } from "react";
+import NameInputYup from "./NameInputYup";
 
 const FormPageOrder = () => {
   const kucukBoyutFiyat = 50;
@@ -177,20 +178,7 @@ const FormPageOrder = () => {
         </div>
       </div>
       <div className="NoteClass">
-        <FormGroup className="nameInput">
-          <Label htmlFor="exampleEmail">
-            <h4>İsim</h4>
-          </Label>
-          <Input
-            className="NotInput"
-            type="text"
-            name="Name"
-            id="name-input"
-            placeholder="İsminizi Yazar mısınız ?"
-            onChange={nameChangeHandler}
-          />
-        </FormGroup>
-
+        <NameInputYup nameChangeHandler = {nameChangeHandler}/>
         <FormGroup>
           <Label htmlFor="special-text">
             <h4>Sipariş Notu</h4>
