@@ -13,13 +13,14 @@
     margin-bottom: 2rem;
     padding: 0;
     color: #FAF7F2;
-    margin-left: 5rem;
+    margin-left: 3rem;
 }
 .MainPageGenelDiv .KodYazı{
     font-size: 4rem;
     margin-top: 0;
     margin-bottom: 0;
     color: #FAF7F2;
+    margin-left: 1.5rem;
 }
 .MainPageGenelDiv .PızzaYazı{
     font-size: 4rem;
@@ -28,7 +29,7 @@
     color: #FAF7F2;
 }
 .Yazılar{
-    margin-bottom: 25rem;
+    margin-bottom: 12rem;
 }
 .AcıktımButon{
     background-color: #FDC913;
@@ -38,7 +39,7 @@
     padding-left: 3rem;
     padding-right: 3rem;
 
-    margin-left: 9rem;
-    margin-top: 1rem;
+    margin-left: 11rem;
+    margin-top: 1.5rem;
     border-radius: 10px;
 }
