@@ -131,7 +131,7 @@ const FormPageOrder = () => {
               </h4>
             </Label>
             <Input type="select" name="select" id="exampleSelect">
-              <option value="" disabled>
+              <option value="" disabled selected>
                 Hamur Seçiniz
               </option>
               <option>İnce</option>
