@@ -83,9 +83,9 @@ const FormPageOrder = () => {
       <h2>{formObjesi.isim}</h2>
       <div className="FYP">
         <div className="FYPP">
-          <p>40 ₺</p>
-          <p>4.9</p>
-          <p>(200)</p>
+          <p>{kucukBoyutFiyat}₺</p>
+          <p>5.3</p>
+          <p>200</p>
         </div>
         <div className="Paragraf">
           <p>{formObjesi.pizzaAcıklama}</p>
