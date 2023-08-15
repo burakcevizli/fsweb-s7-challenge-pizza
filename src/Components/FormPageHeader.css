@@ -3,6 +3,9 @@
     margin-left: 25%;
     margin-right: 25%;
 }
+.FPOMD h2{
+    margin-top: 1.5rem;
+}
 .FormPageHeader{
     background-color: #CE2829;
     height: 20vh;
@@ -14,8 +17,9 @@
 }
 .FormPageHeader h4{
     text-align: start;   
-    margin-top: 3.5rem;
+    margin-top: 3.1rem;
     color: #FAF7F2;
+    font-size: 1rem;
 }
 
 .headerBaslıklar{
@@ -78,7 +82,7 @@
     border-radius: 2px;
 }
 .AdisyonClass h3{
-    padding-left: 35%;
+    padding-left: 25%;
     
     
 }
@@ -91,7 +95,7 @@
 }
 .counterSayaci{
     font-weight: bold;
-    
+    margin-top: 0.8rem;
 }
 .Eksilt{
     height: 3rem;
@@ -109,6 +113,8 @@
 .Secimler{
     display: flex;
     justify-content: space-around;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 .Secimler h4{
     color: #292929;
@@ -127,6 +133,7 @@
     width: 100%;
     background-color: #FDC913;
     border-radius: 2px;
+    
 }
 .nameInput{
     margin-top: 1.5rem;

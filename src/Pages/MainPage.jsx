@@ -1,7 +1,8 @@
 import React from "react";
 import "./MainPage.css";
 import { Link } from "react-router-dom";
-
+import { Button } from "reactstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MainPage = () => {
   return (
@@ -12,7 +13,7 @@ const MainPage = () => {
           <p className="KodYazı">KOD ACIKTIRIR</p>
           <p className="PızzaYazı">PIZZA DOYURUR</p>
           <Link to="/orderpage">
-            <button className="AcıktımButon">ACIKTIM</button>
+          <Button color="warning" className="AcıktımButon">ACIKTIM</Button>
           </Link>
         </div>
       </div>
