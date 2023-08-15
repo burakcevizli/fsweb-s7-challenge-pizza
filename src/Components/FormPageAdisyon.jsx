@@ -18,7 +18,7 @@ const FormPageAdisyon = (props) => {
     peynir,
     note,
     boyutSizePrice,
-    counter
+    counter,
   } = props;
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const FormPageAdisyon = (props) => {
     MüşteriNotu: note,
     AdetSayisi : counter
   };
-
+  
   const siparisClickHandler = () => {
     console.log(fis);
 

@@ -2,7 +2,7 @@ import React from "react";
 import FormPageHeader from "../Components/FormPageHeader";
 import FormPageOrder from "../Components/FormPageOrder";
 
-const FormPage = () => {
+const FormPage = (props) => {
   return (
     <div>
       <FormPageHeader />

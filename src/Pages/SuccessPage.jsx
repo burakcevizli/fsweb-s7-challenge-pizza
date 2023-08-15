@@ -1,7 +1,8 @@
 import React from "react";
 import "./SuccessPage.css";
 
-const SuccessPage = () => {
+const SuccessPage = (props) => {
+
   return (
     <div className="successPageDiv">
       <div className="successTeknolojik">
@@ -11,6 +12,7 @@ const SuccessPage = () => {
         <p>TEBRIKLER!</p>
         <p>SIPARISINIZ ALINDI!</p>
       </div>
+     
     </div>
   );
 };

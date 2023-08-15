@@ -4,7 +4,9 @@ import MainPage from "./Pages/MainPage";
 import { Switch, Route } from "react-router-dom";
 import SuccessPage from "./Pages/SuccessPage";
 
+
 const App = () => {
+
   return (
     <Switch>
       <Route id="order-pizza" path="/" exact>

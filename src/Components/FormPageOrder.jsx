@@ -208,6 +208,7 @@ const FormPageOrder = () => {
           peynir={peynir}
           note={note}
           boyutSizePrice={boyutSizePrice}
+          
         />
       </div>
     </div>
