@@ -67,7 +67,7 @@ const FormPageAdisyon = (props) => {
         className="SiparisVer"
         onClick={siparisClickHandler}
       >
-        ONAYLA
+        SIPARIS VER
       </Button>
       </Link>
     </div>
