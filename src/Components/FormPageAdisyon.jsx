@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Button} from "reactstrap";
+import { Button } from "reactstrap";
 
 const FormPageAdisyon = (props) => {
-  const pizzaPrice = 40;
+  const pizzaPrice = 0;
   const [totalPrice, setTotalPrice] = useState(pizzaPrice);
   const {
     ekMalzemelerPrice,
@@ -16,12 +16,17 @@ const FormPageAdisyon = (props) => {
     sucuk,
     peynir,
     note,
-    boyutSizePrice
+    boyutSizePrice,
+    counter
   } = props;
 
   useEffect(() => {
-    setTotalPrice(pizzaPrice * props.counter + ekMalzemelerPrice + boyutSizePrice );
-  }, [props.counter, ekMalzemelerPrice,boyutSizePrice]);
+    setTotalPrice(
+      pizzaPrice * counter +
+        ekMalzemelerPrice * counter +
+        boyutSizePrice * counter
+    );
+  }, [counter, ekMalzemelerPrice, boyutSizePrice]);
 
   const fis = {
     Pizza: formObjesi.isim,
@@ -33,10 +38,9 @@ const FormPageAdisyon = (props) => {
     Sucuk: sucuk,
     Peynir: peynir,
     Müşteri: isim,
-    MüşteriNotu : note
+    MüşteriNotu: note,
+    AdetSayisi : counter
   };
-
- 
 
   const siparisClickHandler = () => {
     console.log(fis);
@@ -53,7 +57,13 @@ const FormPageAdisyon = (props) => {
         <h4>Toplam</h4>
         <h4>{totalPrice} ₺</h4>
       </div>
-      <Button color="warning" type="submit" id="order-button" className="SiparisVer" onClick={siparisClickHandler}>
+      <Button
+        color="warning"
+        type="submit"
+        id="order-button"
+        className="SiparisVer"
+        onClick={siparisClickHandler}
+      >
         ONAYLA
       </Button>
     </div>

@@ -1,17 +1,16 @@
 import React from "react";
 import FormPageCounter from "./FormPageCounter";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import {Form, FormGroup, Label, Input} from "reactstrap";
 import { useState } from "react";
 
 const FormPageOrder = () => {
-  const kucukBoyutFiyat = 20;
-  const buyukBoyutFiyat = 40;
+  const kucukBoyutFiyat = 50;
+  const buyukBoyutFiyat = 70;
 
   const formObjesi = {
     isim: "Position Absolute Acı Pizza",
     pizzaAcıklama:
       " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızı alamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcı olabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
-    boyut: size,
   };
 
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
