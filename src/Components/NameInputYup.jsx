@@ -41,6 +41,7 @@ const NameInputYup = (props) => {
         <h4>İsim</h4>
       </Label>
       <Input
+        data-cy = "nameInput"
         className="NotInput"
         type="text"
         name="name"

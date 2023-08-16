@@ -147,21 +147,21 @@ const FormPageOrder = () => {
         <div className="CheckBoxDiv">
           <FormGroup check>
             <Label check>
-              <Input type="checkbox" name="Biber" onClick={biberClickHandler} />
+              <Input data-cy="biber" type="checkbox" name="Biber" onClick={biberClickHandler} />
               Biber
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input type="checkbox" name="Sogan" onClick={soganClickHandler} />
+              <Input data-cy="sogan" type="checkbox" name="Sogan" onClick={soganClickHandler} />
               Soğan
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input type="checkbox" name="Sucuk" onClick={sucukClickHandler} />
+              <Input data-cy="sucuk" type="checkbox" name="Sucuk" onClick={sucukClickHandler} />
               Sucuk
             </Label>
           </FormGroup>
@@ -169,6 +169,7 @@ const FormPageOrder = () => {
             <Label check>
               <Input
                 type="checkbox"
+                data-cy="peynir"
                 name="Peynir"
                 onClick={peynirClickHandler}
               />

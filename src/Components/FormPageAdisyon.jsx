@@ -66,6 +66,7 @@ const FormPageAdisyon = (props) => {
         id="order-button"
         className="SiparisVer"
         onClick={siparisClickHandler}
+        data-cy = "siparisVer"
       >
         SIPARIS VER
       </Button>
