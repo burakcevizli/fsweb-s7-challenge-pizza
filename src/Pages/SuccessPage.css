@@ -29,14 +29,14 @@
   justify-content: space-evenly;
 }
 .successFis {
+  padding-top: 2rem;
   margin-top: 2rem;
   width: 20%;
   height: 25vh;
-  flex-wrap: wrap;
+ 
   border: 3px solid #faf7f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ 
+  text-align: center;
   color: #faf7f2;
 }
 .successBilgi {

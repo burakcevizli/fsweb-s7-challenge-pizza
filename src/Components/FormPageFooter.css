@@ -1,0 +1,34 @@
+.footerDiv{
+    display: flex;
+    justify-content: space-between;
+    background-color: #292929;
+}
+.solDiv{
+    margin-left: 25rem;
+    width: 25%;
+}
+.instaResimler{
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+gap: 5px;
+}
+.solUst{
+    display: flex;
+}
+.footerDiv{
+    color: #FAF7F2;
+}
+.h1Class{
+    color: white;
+}
+.copyRight{
+    margin-top: 2rem;
+    display: flex;
+    background-color: #292929;
+    color: #FAF7F2;
+    justify-content: space-around;
+}
+.GENELDİV{
+    background-color:#292929 ;
+}
