@@ -15,6 +15,7 @@ const FormPageCounter = (props) => {
     note,
     boyutSizePrice,
     setFisState,
+    hamur,
   } = props;
 
   const arttir = () => {
@@ -22,7 +23,7 @@ const FormPageCounter = (props) => {
   };
 
   const azalt = () => {
-    setCounter(Math.max(counter -1 , 1));
+    setCounter(Math.max(counter - 1, 1));
   };
 
   return (
@@ -33,7 +34,7 @@ const FormPageCounter = (props) => {
         </button>
 
         <p className="counterSayaci">{counter}</p>
-        
+
         <button className="Arttır" onClick={arttir}>
           +
         </button>
@@ -50,8 +51,9 @@ const FormPageCounter = (props) => {
         sucuk={sucuk}
         peynir={peynir}
         note={note}
-        boyutSizePrice = {boyutSizePrice}
-        setFisState = {setFisState}
+        boyutSizePrice={boyutSizePrice}
+        setFisState={setFisState}
+        hamur={hamur}
       />
     </div>
   );

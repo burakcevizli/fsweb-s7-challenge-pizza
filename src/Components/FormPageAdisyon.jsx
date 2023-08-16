@@ -20,6 +20,7 @@ const FormPageAdisyon = (props) => {
     boyutSizePrice,
     counter,
     setFisState,
+    hamur
   } = props;
 
   useEffect(() => {
@@ -41,13 +42,14 @@ const FormPageAdisyon = (props) => {
     Peynir: peynir,
     Müşteri: isim,
     MüşteriNotu: note,
-    AdetSayisi : counter
+    AdetSayisi : counter,
+    Hamur : hamur,
+    SecimlerPrice : ekMalzemelerPrice + boyutSizePrice + "₺"
   };
   
   const siparisClickHandler = () => {
     console.log(fis);
     setFisState(fis)
-
   };
 
   return (

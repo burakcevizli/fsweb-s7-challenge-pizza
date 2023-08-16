@@ -23,6 +23,7 @@ const FormPageOrder = (props) => {
   const [peynir, setPeynir] = useState(false);
   const [isim, setİsim] = useState("");
   const [note, setNote] = useState("");
+  const [hamur,setHamur]=useState("")
 
   const boyutClickHandler = (event) => {
     if (event.target.value === "kucuk") {
@@ -36,6 +37,10 @@ const FormPageOrder = (props) => {
 
   const nameChangeHandler = (event) => {
     setİsim(event.target.value);
+  };
+  const hamurChangeHandler = (event) => {
+    setHamur(event.target.value)
+    
   };
 
   const noteChangeHandler = (event) => {
@@ -130,13 +135,13 @@ const FormPageOrder = (props) => {
                 Hamur Seçiniz <span className="yıldız">*</span>
               </h4>
             </Label>
-            <Input type="select" name="select" id="exampleSelect">
+            <Input type="select" onClick={hamurChangeHandler}  name="select" id="exampleSelect">
               <option value="" disabled selected>
                 Hamur Seçiniz
               </option>
-              <option>İnce</option>
-              <option>Orta</option>
-              <option>Kalın</option>
+              <option  value={"İnce"}>İnce</option>
+              <option value={"Orta"}>Orta</option>
+              <option  value= {"Kalın"}>Kalın</option>
             </Input>
           </FormGroup>
         </Form>
@@ -210,6 +215,7 @@ const FormPageOrder = (props) => {
           note={note}
           boyutSizePrice={boyutSizePrice}
           setFisState = {props.setFisState}
+          hamur = {hamur}
         />
       </div>
     </div>

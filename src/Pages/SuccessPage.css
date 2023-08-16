@@ -11,7 +11,7 @@
     color: #FAF7F2;
 }
 .orderSuccesText{
-    margin-top: 12rem;
+    margin-top: 6rem;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -19,4 +19,31 @@
 .orderSuccesText p{
     font-size: 4rem;
     color: #FAF7F2;
+}
+.adisyonPizza{
+    text-align: center;
+    color: #FAF7F2;
+}
+.genelFisDiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+.successFis{
+    margin-top: 2rem;
+    width: 20%;
+    height: 25vh;
+    flex-wrap: wrap;
+    border: 3px solid #FAF7F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FAF7F2;
+}
+.successBilgi{
+    margin-top: 2rem;
+    width: 40%;
+    color: #FAF7F2;
+    
+    
+    
 }
