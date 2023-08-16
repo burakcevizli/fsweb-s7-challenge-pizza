@@ -19,6 +19,7 @@ const FormPageAdisyon = (props) => {
     note,
     boyutSizePrice,
     counter,
+    setFisState,
   } = props;
 
   useEffect(() => {
@@ -45,6 +46,7 @@ const FormPageAdisyon = (props) => {
   
   const siparisClickHandler = () => {
     console.log(fis);
+    setFisState(fis)
 
   };
 

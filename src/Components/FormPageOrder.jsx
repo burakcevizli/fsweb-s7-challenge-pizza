@@ -4,10 +4,10 @@ import {Form, FormGroup, Label, Input} from "reactstrap";
 import { useState } from "react";
 import NameInputYup from "./NameInputYup";
 
-const FormPageOrder = () => {
+const FormPageOrder = (props) => {
   const kucukBoyutFiyat = 50;
   const buyukBoyutFiyat = 70;
-
+  
   const formObjesi = {
     isim: "Position Absolute Acı Pizza",
     pizzaAcıklama:
@@ -209,7 +209,7 @@ const FormPageOrder = () => {
           peynir={peynir}
           note={note}
           boyutSizePrice={boyutSizePrice}
-          
+          setFisState = {props.setFisState}
         />
       </div>
     </div>

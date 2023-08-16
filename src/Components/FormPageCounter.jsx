@@ -14,7 +14,7 @@ const FormPageCounter = (props) => {
     peynir,
     note,
     boyutSizePrice,
-    
+    setFisState,
   } = props;
 
   const arttir = () => {
@@ -51,7 +51,7 @@ const FormPageCounter = (props) => {
         peynir={peynir}
         note={note}
         boyutSizePrice = {boyutSizePrice}
-        
+        setFisState = {setFisState}
       />
     </div>
   );
