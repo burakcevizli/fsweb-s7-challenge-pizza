@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Button } from "reactstrap";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const FormPageAdisyon = (props) => {
   const pizzaPrice = 0;
@@ -20,7 +20,7 @@ const FormPageAdisyon = (props) => {
     boyutSizePrice,
     counter,
     setFisState,
-    hamur
+    hamur,
   } = props;
 
   useEffect(() => {
@@ -42,14 +42,14 @@ const FormPageAdisyon = (props) => {
     Peynir: peynir,
     Müşteri: isim,
     MüşteriNotu: note,
-    AdetSayisi : counter,
-    Hamur : hamur,
-    SecimlerPrice : ekMalzemelerPrice + boyutSizePrice + "₺"
+    AdetSayisi: counter,
+    Hamur: hamur,
+    SecimlerPrice: ekMalzemelerPrice + boyutSizePrice + "₺",
   };
-  
+
   const siparisClickHandler = () => {
     console.log(fis);
-    setFisState(fis)
+    setFisState(fis);
   };
 
   return (
@@ -64,16 +64,16 @@ const FormPageAdisyon = (props) => {
         <h4>{totalPrice} ₺</h4>
       </div>
       <Link to="/successpage">
-      <Button
-        color="warning"
-        type="submit"
-        id="order-button"
-        className="SiparisVer"
-        onClick={siparisClickHandler}
-        data-cy = "siparisVer"
-      >
-        SIPARIS VER
-      </Button>
+        <Button
+          color="warning"
+          type="submit"
+          id="order-button"
+          className="SiparisVer"
+          onClick={siparisClickHandler}
+          data-cy="siparisVer"
+        >
+          SIPARIS VER
+        </Button>
       </Link>
     </div>
   );

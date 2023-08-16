@@ -1,49 +1,46 @@
-.successPageDiv{
-    height: 100vh;
-    background-color: #CE2829;
+.successPageDiv {
+  height: 100vh;
+  background-color: #ce2829;
 }
-.successTeknolojik{
-    text-align: center;
-    padding-top: 5rem;
+.successTeknolojik {
+  text-align: center;
+  padding-top: 5rem;
 }
 
-.successTeknolojik h1{
-    color: #FAF7F2;
+.successTeknolojik h1 {
+  color: #faf7f2;
 }
-.orderSuccesText{
-    margin-top: 6rem;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.orderSuccesText {
+  margin-top: 6rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-.orderSuccesText p{
-    font-size: 4rem;
-    color: #FAF7F2;
+.orderSuccesText p {
+  font-size: 4rem;
+  color: #faf7f2;
 }
-.adisyonPizza{
-    text-align: center;
-    color: #FAF7F2;
+.adisyonPizza {
+  text-align: center;
+  color: #faf7f2;
 }
-.genelFisDiv{
-    display: flex;
-    justify-content: space-evenly;
+.genelFisDiv {
+  display: flex;
+  justify-content: space-evenly;
 }
-.successFis{
-    margin-top: 2rem;
-    width: 20%;
-    height: 25vh;
-    flex-wrap: wrap;
-    border: 3px solid #FAF7F2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FAF7F2;
+.successFis {
+  margin-top: 2rem;
+  width: 20%;
+  height: 25vh;
+  flex-wrap: wrap;
+  border: 3px solid #faf7f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #faf7f2;
 }
-.successBilgi{
-    margin-top: 2rem;
-    width: 40%;
-    color: #FAF7F2;
-    
-    
-    
+.successBilgi {
+  margin-top: 2rem;
+  width: 40%;
+  color: #faf7f2;
 }
