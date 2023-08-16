@@ -12,7 +12,7 @@ const NameInputYup = (props) => {
   const formSchema = Yup.object().shape({
     name: Yup.string()
       .required("İsim olmadan işlem devam edilemez. ")
-      .min(3, "İsim karakterini en az 3 tane olmalıdır.")
+      .min(2, "İsim en az 2 karakter olmalıdır")
   });
 
   const handleNameChange = (e) => {
