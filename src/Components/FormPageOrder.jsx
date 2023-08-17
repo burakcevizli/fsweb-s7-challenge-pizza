@@ -14,6 +14,8 @@ const FormPageOrder = (props) => {
       " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızı alamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcı olabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
   };
 
+  
+
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
   const [boyutSizePrice, setBoyutSizePrice] = useState(0);
   const [size, setSize] = useState("");
@@ -156,6 +158,7 @@ const FormPageOrder = (props) => {
       <div className="EkMalzemeler">
         <h3>Ek Malzemeler</h3>
         <p>En Fazla 10 Malzeme Seçebilirsiniz. 5₺. </p>
+        
         <div className="CheckBoxDiv">
           <FormGroup check>
             <Label check>
