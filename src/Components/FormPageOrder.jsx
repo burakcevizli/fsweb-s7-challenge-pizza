@@ -13,9 +13,7 @@ const FormPageOrder = (props) => {
     pizzaAcıklama:
       " Bu pizzamızı yemeyen bin pişman. Gelin bu tadın enfesliğinin sizde farkına varın. Dalından taze koparılmış ürünlerimizle kendinizi butazelikle yenilenmiş hissedeceksiniz. Sonrasında yazdığınız kodlarSeniurlarınız tarafından takdir görecek. Sizde çok çalışıp hakkınızı alamıyorsanız bu pizzadan tadarak daha başarılı bir yazılımcı olabilirsiniz. Birde pizza yemek için İtalyaya gitmenize gerek yok , o pizza size bir tık uzakta! ",
   };
-
-  
-
+  const [isValid,setValid] = useState(true)
   const [ekMalzemelerPrice, setEkMalzemelerPrice] = useState(0);
   const [boyutSizePrice, setBoyutSizePrice] = useState(0);
   const [size, setSize] = useState("");
@@ -209,7 +207,7 @@ const FormPageOrder = (props) => {
         </div>
       </div>
       <div className="NoteClass">
-        <NameInputYup nameChangeHandler={nameChangeHandler} />
+        <NameInputYup setValid ={setValid} nameChangeHandler={nameChangeHandler} />
         <FormGroup className="SiparisClass">
           <Label htmlFor="special-text">
             <h4>Sipariş Notu</h4>
@@ -241,6 +239,7 @@ const FormPageOrder = (props) => {
           boyutSizePrice={boyutSizePrice}
           setFisState={props.setFisState}
           hamur={hamur}
+          isValid = {isValid}
         />
       </div>
     </div>

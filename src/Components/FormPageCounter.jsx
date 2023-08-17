@@ -16,6 +16,7 @@ const FormPageCounter = (props) => {
     boyutSizePrice,
     setFisState,
     hamur,
+    isValid
   } = props;
 
   const arttir = () => {
@@ -54,6 +55,7 @@ const FormPageCounter = (props) => {
         boyutSizePrice={boyutSizePrice}
         setFisState={setFisState}
         hamur={hamur}
+        isValid = {isValid}
       />
     </div>
   );

@@ -8,6 +8,7 @@ const NameInputYup = (props) => {
     name: ""
   });
   
+  
 
   const formSchema = Yup.object().shape({
     name: Yup.string()
@@ -27,9 +28,11 @@ const NameInputYup = (props) => {
       .validate(value)
       .then(() => {
         setFormErrors({ ...formErrors, [fieldName]: "" });
+        props.setValid(false)
       })
       .catch((err) => {
         setFormErrors({ ...formErrors, [fieldName]: err.errors[0] });
+        props.setValid(true)
       });
   };
 

@@ -3,13 +3,12 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Button } from "reactstrap";
 import { useHistory } from "react-router-dom";
-
-
+import axios from "axios";
 
 const FormPageAdisyon = (props) => {
   const pizzaPrice = 0;
   const [totalPrice, setTotalPrice] = useState(pizzaPrice);
-  const history = useHistory()
+  const history = useHistory();
   const {
     ekMalzemelerPrice,
     formObjesi,
@@ -24,6 +23,7 @@ const FormPageAdisyon = (props) => {
     counter,
     setFisState,
     hamur,
+    isValid,
   } = props;
 
   useEffect(() => {
@@ -51,9 +51,11 @@ const FormPageAdisyon = (props) => {
   };
 
   const siparisClickHandler = () => {
-    console.log(fis);
-    setFisState(fis);
-    history.push("/successpage")
+    axios.post("https://reqres.in/api/users", fis).then((response) => {
+      console.log(response.data);
+      setFisState(response.data);
+      history.push("/successpage");
+    });
   };
 
   return (
@@ -67,16 +69,17 @@ const FormPageAdisyon = (props) => {
         <h4>Toplam</h4>
         <h4>{totalPrice} ₺</h4>
       </div>
-        <Button
-          color="warning"
-          type="submit"
-          id="order-button"
-          className="SiparisVer"
-          onClick={siparisClickHandler}
-          data-cy="siparisVer"
-        >
-          SIPARIS VER
-        </Button>
+      <Button
+        color="warning"
+        disabled={isValid}
+        type="submit"
+        id="order-button"
+        className="SiparisVer"
+        onClick={siparisClickHandler}
+        data-cy="siparisVer"
+      >
+        SIPARIS VER
+      </Button>
     </div>
   );
 };
