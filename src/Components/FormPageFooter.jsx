@@ -1,68 +1,100 @@
 import React from "react";
-import icon1 from "../Assets/adv-aseets/icons/icon-1.png";
-import icon2 from "../Assets/adv-aseets/icons/icon-2.png";
-import icon3 from "../Assets/adv-aseets/icons/icon-3.png";
-import insta0 from "../Assets/adv-aseets/insta/li-0.png";
-import insta1 from "../Assets/adv-aseets/insta/li-1.png";
-import insta2 from "../Assets/adv-aseets/insta/li-2.png";
-import insta3 from "../Assets/adv-aseets/insta/li-3.png";
-import insta4 from "../Assets/adv-aseets/insta/li-4.png";
-import insta5 from "../Assets/adv-aseets/insta/li-5.png";
 import "./FormPageFooter.css";
+import Footer1 from "../Assets/adv-aseets/icons/icon-1.png";
+import Footer2 from "../Assets/adv-aseets/icons/icon-2.png";
+import Footer3 from "../Assets/adv-aseets/icons/icon-3.png";
 
-const FormPageFooter = () => {
+import instagram1 from "../Assets/adv-aseets/insta/li-0.png";
+import instagram2 from "../Assets/adv-aseets/insta/li-1.png";
+import instagram3 from "../Assets/adv-aseets/insta/li-2.png";
+import instagram4 from "../Assets/adv-aseets/insta/li-3.png";
+import instagram5 from "../Assets/adv-aseets/insta/li-4.png";
+import instagram6 from "../Assets/adv-aseets/insta/li-5.png";
+
+function FormPageFooter() {
   return (
-    <div className="GENELDİV">
-      <div className="footerDiv">
-        <div className="solDiv">
-          <h1 className="h1Class">Teknolojik Yemekler</h1>
-          <ul>
-            <li className="solUst">
-              <img src={icon1} alt="Icon 1" />
-              <p>1830.SOKAK EMRE SİTESİ 5/12 YENİMAHALLE ANKARA</p>
-            </li>
-            <li className="solUst">
-              <img src={icon2} alt="Icon 2" />
-              <p>1830.SOKAK EMRE SİTESİ 5/12 YENİMAHALLE ANKARA</p>
-            </li>
-            <li className="solUst">
-              <img src={icon3} alt="Icon 3" />
-              <p>1830.SOKAK EMRE SİTESİ 5/12 YENİMAHALLE ANKARA</p>
-            </li>
-          </ul>
-        </div>
+    <div id="footer-container">
+      <div id="footer-main-container">
+        <div id="footer-main-container-one">
+          <div className="footer-contents">
+            <h1> Teknolojik Yemekler </h1>
+            <p>
+              <img className="footer-img" src={Footer1} alt="icons" />
+              341 Londonderry Road, İstanbul Türkiye
+            </p>
+            <p>
+              <img className="footer-img" src={Footer2} alt="icons" />
+              aciktim@teknolojikyemekler.com
+            </p>
+            <p>
+              <img className="footer-img" src={Footer3} alt="icons" /> +90 216
+              123 45 67
+            </p>
+          </div>
 
-        <div className="ortaDiv">
-          <h1 className="h1Class">Hot Menü</h1>
-          <ul>
-            <li>TERMİNAL PİZZA</li>
-            <li>TERMİNAL PİZZA</li>
-            <li>TERMİNAL PİZZA</li>
-            <li>TERMİNAL PİZZA</li>
-            <li>TERMİNAL PİZZA</li>
-            <li>TERMİNAL PİZZA</li>
-          </ul>
-        </div>
+          <div className="footer-contents">
+            <h2>Sıccacık Menüler</h2>
+            <p>Terminal Pizza</p>
+            <p>5 Kişilik Hackathlon Pizza</p>
+            <p>useEffect Tavuklu Pizza</p>
+            <p>Beyaz Console Frosty</p>
+            <p>Testler Geçti Mutlu Burger</p>
+            <p>Position Absolute Acı Burger</p>
+          </div>
 
-        <div className="sagDiv">
-          <h1 className="h1Class">Instagram</h1>
-          <div className="instaResimler">
-            <img src={insta0} alt="insta1"/>
-            <img src={insta1} alt="insta1"/>
-            <img src={insta2} alt="insta1"/>
-            <img src={insta3} alt="insta1"/>
-            <img src={insta4} alt="insta1"/>
-            <img src={insta5} alt="insta1"/>
+          <div className="footer-contents">
+            <h2>Instagram</h2>
+            <div id="footer-contents-instagram">
+              <img
+                style={{ padding: "5px" }}
+                alt="insta"
+                src={instagram1}
+              ></img>
+              <img
+                style={{ padding: "5px" }}
+                alt="insta"
+                src={instagram2}
+              ></img>
+              <img
+                style={{ padding: "5px" }}
+                alt="insta"
+                src={instagram3}
+              ></img>
+              <img
+                style={{ padding: "5px" }}
+                alt="insta"
+                src={instagram4}
+              ></img>
+              <img
+                style={{ padding: "5px" }}
+                alt="insta"
+                src={instagram5}
+              ></img>
+              <img
+                style={{ padding: "5px" }}
+                alt="insta"
+                src={instagram6}
+              ></img>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className="copyRight">
-        <h6>@2023 Teknolojik Yemekler</h6>
-        <img src={icon3} alt="Icon 3" />
+      <hr size="1" color="gray" />
+      <div id="footer-main-container-two">
+        <div id="footer-main-container-two-head">
+          <div id="copyright">@ 2023 Teknolojik Yemekler.</div>
+          <div>
+            <img
+              alt="insta"
+              className="footer-img icons"
+              src={Footer1}
+              style={{ color: "#ffffff" }}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default FormPageFooter;
