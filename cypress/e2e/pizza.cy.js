@@ -10,6 +10,7 @@ describe("Pizzatesti", () => {
       cy.get('[data-cy="sucuk"]').click().should("be.checked");
       cy.get('[data-cy="peynir"]').click().should("be.checked");
     });
+    
     it("Order Page düzgün çalışıyor mu?", () => {
       cy.get('[data-cy="kucuk"]').click().should("be.checked")
       cy.get('[data-cy="buyuk"]').click().should("be.checked")
