@@ -13,7 +13,7 @@ const MainPage = () => {
           <p className="KodYazı">KOD ACIKTIRIR</p>
           <p className="PızzaYazı">PIZZA DOYURUR</p>
           <Link to="/pizza">
-            <Button color="warning" className="AcıktımButon">
+            <Button color="warning" className="AcıktımButon" data-cy="anaSayfaButon">
               ACIKTIM
             </Button>
           </Link>
