@@ -16,10 +16,10 @@ const App = () => {
       <Route id="order-pizza" path="/" exact>
         <MainPage />
       </Route>
-      <Route path="/pizza">
+      <Route path="/pizza" exact>
         <FormPage setFisState = {setFisState}/>
       </Route>
-      <Route path="/successpage">
+      <Route path="/successpage" exact>
         <SuccessPage fisState={fisState}/>
       </Route>
     </Switch>
