@@ -10,17 +10,13 @@ describe("Pizzatesti", () => {
       cy.get('[data-cy="sucuk"]').click().should("be.checked");
       cy.get('[data-cy="peynir"]').click().should("be.checked");
     });
-    it("Hamur ve Boyut seçme zorunlu kısımları çalışıyor mu ?", () => {
+    it("Order Page düzgün çalışıyor mu?", () => {
       cy.get('[data-cy="kucuk"]').click().should("be.checked")
       cy.get('[data-cy="buyuk"]').click().should("be.checked")
       cy.get('#exampleSelect').select("Kalın")
-    });
-    it("isim inputuna yazı yazılıyor mu ?" , ()=>{
       cy.get('[data-cy="nameInput"]').type("Burak CEVİZLİ")
-    })
-    it("Sipariş Ver Butonuna Basınca Gönderiyor mu ?" , ()=>{
-        cy.get('[data-cy = "siparisVer"]').click().should("be.enabled")
-  });
+      cy.get('[data-cy = "siparisVer"]').click().should("be.enabled")
+    });
 })
 
 
