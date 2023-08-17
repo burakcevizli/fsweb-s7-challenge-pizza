@@ -2,11 +2,14 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Button } from "reactstrap";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
+
 
 const FormPageAdisyon = (props) => {
   const pizzaPrice = 0;
   const [totalPrice, setTotalPrice] = useState(pizzaPrice);
+  const history = useHistory()
   const {
     ekMalzemelerPrice,
     formObjesi,
@@ -50,6 +53,7 @@ const FormPageAdisyon = (props) => {
   const siparisClickHandler = () => {
     console.log(fis);
     setFisState(fis);
+    history.push("/successpage")
   };
 
   return (
@@ -63,7 +67,6 @@ const FormPageAdisyon = (props) => {
         <h4>Toplam</h4>
         <h4>{totalPrice} ₺</h4>
       </div>
-      <Link to="/successpage">
         <Button
           color="warning"
           type="submit"
@@ -74,7 +77,6 @@ const FormPageAdisyon = (props) => {
         >
           SIPARIS VER
         </Button>
-      </Link>
     </div>
   );
 };
