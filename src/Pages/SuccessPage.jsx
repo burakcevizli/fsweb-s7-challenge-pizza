@@ -13,8 +13,8 @@ const SuccessPage = (props) => {
         <h1>Teknolojik Yemekler</h1>
       </div>
       <div className="orderSuccesText">
-        <p>TEBRIKLER!</p>
-        <p>SIPARISINIZ ALINDI!</p>
+        <p className="lezzetinYolda">lezzetin yolda</p>
+        <p className="siparisinizAlındı">SIPARISINIZ ALINDI!</p>
       </div>
       <hr style={{ color: "white", height: "3rem" }} />
       <div>

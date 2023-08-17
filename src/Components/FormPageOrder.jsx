@@ -1,13 +1,13 @@
 import React from "react";
 import FormPageCounter from "./FormPageCounter";
-import {Form, FormGroup, Label, Input} from "reactstrap";
+import { Form, FormGroup, Label, Input } from "reactstrap";
 import { useState } from "react";
 import NameInputYup from "./NameInputYup";
 
 const FormPageOrder = (props) => {
   const kucukBoyutFiyat = 50;
   const buyukBoyutFiyat = 70;
-  
+
   const formObjesi = {
     isim: "Position Absolute Acı Pizza",
     pizzaAcıklama:
@@ -23,7 +23,7 @@ const FormPageOrder = (props) => {
   const [peynir, setPeynir] = useState(false);
   const [isim, setİsim] = useState("");
   const [note, setNote] = useState("");
-  const [hamur,setHamur]=useState("")
+  const [hamur, setHamur] = useState("");
 
   const boyutClickHandler = (event) => {
     if (event.target.value === "kucuk") {
@@ -39,8 +39,7 @@ const FormPageOrder = (props) => {
     setİsim(event.target.value);
   };
   const hamurChangeHandler = (event) => {
-    setHamur(event.target.value)
-    
+    setHamur(event.target.value);
   };
 
   const noteChangeHandler = (event) => {
@@ -99,7 +98,7 @@ const FormPageOrder = (props) => {
       </div>
       <div className="OrdersDiv">
         <Form id="pizza-form">
-          <FormGroup>
+          <FormGroup className="boyutClass">
             <h4>
               Boyut Seç <span className="yıldız">*</span>
             </h4>
@@ -110,6 +109,7 @@ const FormPageOrder = (props) => {
                   name="radio1"
                   value="kucuk"
                   onChange={boyutClickHandler}
+                  data-cy="kucuk"
                 />
                 Küçük
               </Label>
@@ -122,6 +122,7 @@ const FormPageOrder = (props) => {
                   name="radio1"
                   value="buyuk"
                   onChange={boyutClickHandler}
+                  data-cy="buyuk"
                 />
                 Büyük
               </Label>
@@ -129,19 +130,25 @@ const FormPageOrder = (props) => {
           </FormGroup>
         </Form>
         <Form>
-          <FormGroup>
+          <FormGroup className="boyutClass">
             <Label htmlFor="exampleSelect">
               <h4>
                 Hamur Seçiniz <span className="yıldız">*</span>
               </h4>
             </Label>
-            <Input type="select" onClick={hamurChangeHandler}  name="select" id="exampleSelect">
-              <option value="" disabled selected>
+            <Input
+              type="select"
+              onClick={hamurChangeHandler}
+              name="select"
+              id="exampleSelect"
+              defaultValue=""
+            >
+              <option value="" disabled>
                 Hamur Seçiniz
               </option>
-              <option  value={"İnce"}>İnce</option>
-              <option value={"Orta"}>Orta</option>
-              <option  value= {"Kalın"}>Kalın</option>
+              <option value="İnce">İnce</option>
+              <option value="Orta">Orta</option>
+              <option value="Kalın">Kalın</option>
             </Input>
           </FormGroup>
         </Form>
@@ -152,21 +159,36 @@ const FormPageOrder = (props) => {
         <div className="CheckBoxDiv">
           <FormGroup check>
             <Label check>
-              <Input data-cy="biber" type="checkbox" name="Biber" onClick={biberClickHandler} />
+              <Input
+                data-cy="biber"
+                type="checkbox"
+                name="Biber"
+                onClick={biberClickHandler}
+              />
               Biber
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input data-cy="sogan" type="checkbox" name="Sogan" onClick={soganClickHandler} />
+              <Input
+                data-cy="sogan"
+                type="checkbox"
+                name="Sogan"
+                onClick={soganClickHandler}
+              />
               Soğan
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input data-cy="sucuk" type="checkbox" name="Sucuk" onClick={sucukClickHandler} />
+              <Input
+                data-cy="sucuk"
+                type="checkbox"
+                name="Sucuk"
+                onClick={sucukClickHandler}
+              />
               Sucuk
             </Label>
           </FormGroup>
@@ -184,8 +206,8 @@ const FormPageOrder = (props) => {
         </div>
       </div>
       <div className="NoteClass">
-        <NameInputYup nameChangeHandler = {nameChangeHandler}/>
-        <FormGroup>
+        <NameInputYup nameChangeHandler={nameChangeHandler} />
+        <FormGroup className="SiparisClass">
           <Label htmlFor="special-text">
             <h4>Sipariş Notu</h4>
           </Label>
@@ -214,8 +236,8 @@ const FormPageOrder = (props) => {
           peynir={peynir}
           note={note}
           boyutSizePrice={boyutSizePrice}
-          setFisState = {props.setFisState}
-          hamur = {hamur}
+          setFisState={props.setFisState}
+          hamur={hamur}
         />
       </div>
     </div>

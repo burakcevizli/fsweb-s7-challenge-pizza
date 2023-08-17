@@ -1,4 +1,6 @@
-
+.FYP{
+    margin-top: 3rem;
+}
 .FPOMD{
     margin-left: 25%;
     margin-right: 25%;
@@ -127,6 +129,9 @@
 .Toplam h4{
     color: #CE2829;
 }
+.SiparisClass{
+    margin-top: 2rem;
+}
 
 
 .SiparisVer{
@@ -138,4 +143,10 @@
 }
 .nameInput{
     margin-top: 1.5rem;
+}
+.boyutClass{
+    margin-top: 2rem;
+}
+.EkMalzemeler{
+    margin-top: 2rem;
 }

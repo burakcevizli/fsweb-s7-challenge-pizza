@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Quattrocento&family=Satisfy&display=swap%22");
 .successPageDiv {
   height: 100vh;
   background-color: #ce2829;
@@ -6,7 +7,10 @@
   text-align: center;
   padding-top: 5rem;
 }
-
+.lezzetinYolda{
+  font-family: "Satisfy";
+  color: #FDC913;
+}
 .successTeknolojik h1 {
   color: #faf7f2;
 }
@@ -18,6 +22,9 @@
 }
 .orderSuccesText p {
   font-size: 4rem;
+  
+}
+.siparisinizAlındı{
   color: #faf7f2;
 }
 .adisyonPizza {
